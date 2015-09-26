@@ -1,0 +1,22 @@
+# Site settings
+title: Yıldız Demir Doğrama
+email: ramisy1971@hotmail.com
+cell_phone: 0532 457 25 68
+description: > # this means to ignore newlines until "baseurl:"
+  ferforje, ferforje kapı, ferforje kapı modelleri, ferforje pencere, ferforje pencere korkulukları, ferforje bahçe korkulukları, pencere korkuluğu, bahçe korkuluğu, ferforje bahçe kapısı, ferforje kemer işleri, bina giriş kapısı, paslanmaz korkuluk, paslanmaz korkuluk modelleri, alüminyum korkuluk, alimunyum korkuluk, çatı kaplama, sandiviç panel, çelik konstrüksiyon, teras kapatma, çelik çatı, OSB, Şıngıl, çatı kaplama, alçıpa n dekorasyon işleri, garaj kapısı
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: yildizferforje
+facebook_username: yildizdemirferforje
+
+# Build settings
+resimSatir: 3
+image_width: 200px
+image_height: 160px
+markdown: redcarpet
+highlighter : pygments
+collections: 
+  urunler:
+    tip: ""
+    dosya_ismi: ""
+    referans_ismi: ""
