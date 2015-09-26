@@ -1,0 +1,23 @@
+---
+layout: default
+title: Galeri
+---
+{% comment %} Bir satirda en fazla 3 resim olacak{% endcomment %}
+{% assign temp = 0 %}
+<div id="image-content">
+{% for urun in site.urunler %}
+    {% capture residue %}{{ temp | modulo: site.resimSatir }}{% endcapture %}
+    {% if residue == "0" %}
+	{% if temp > 0 %}
+	    </div>
+	    <div id="image-temp-row">
+	    </div>
+	{% endif %}
+    <div id="image-row">
+    {% endif %}
+    {% assign temp = temp | plus: 1 %}
+    <div id="image-wrapper">
+	<img width={{ site.image_width }} height={{ site.image_height }} src="/images/{{ urun.tip }}/{{ urun.dosya_ismi }}">
+    </div>
+{% endfor %}
+</div>

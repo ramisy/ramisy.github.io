@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% assign temp = 0 %}
+<div id="image-content">
+{% for urun in site.urunler %}
+    {% if urun.tip == page.tip %}
+	{% capture residue %}{{ temp | modulo:site.resimSatir }}{% endcapture %}
+	{% if residue == "0" %}
+	   {% if temp > 0 %}
+	     </div>
+	     <div id="image-temp-row">
+	     </div>
+	    {% endif %}
+	<div id="image-row">
+	{% endif %}
+	{% assign temp = temp | plus: 1 %}
+	<div id="image-wrapper" class="container">
+	    <img width={{ site.image_width }} height={{ site.image_height }} src="/images/{{ urun.tip }}/{{ urun.dosya_ismi }}">
+	    <p>{{ urun.referans_ismi }}</p>
+	</div>
+    {% endif %}
+{% endfor %}
+</div>
